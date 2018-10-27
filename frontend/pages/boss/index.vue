@@ -11,7 +11,7 @@
       {
         content: 'Detalhes',
         style: { background: 'blue', color: '#fff' },
-        handler: () => MessageBox('Notice', 'You clicked the button')
+        handler: () => this.$messagebox('delete')
       }
     ]"></mt-cell-swipe>
     
