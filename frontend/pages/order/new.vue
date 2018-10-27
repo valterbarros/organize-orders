@@ -32,7 +32,7 @@ export default {
   name: 'order-new',
   data () {
     return {
-      value: '',
+      value: [],
       company_name: 'Galeteria Brasão'
     }
   }
