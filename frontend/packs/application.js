@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from '../app.vue'
 import router from '../router'
-import { Field, Radio, PaletteButton, Checklist, Header, Button, CellSwipe } from 'mint-ui';
+import { Field, Radio, PaletteButton, Checklist, Header, Button, CellSwipe, MessageBox } from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import "../init/shared.css"
 
@@ -12,6 +12,7 @@ Vue.component(Checklist.name, Checklist);
 Vue.component(Header.name, Header);
 Vue.component(Button.name, Button);
 Vue.component(CellSwipe.name, CellSwipe);
+Vue.component(MessageBox.name, MessageBox);
 
 new Vue({
   el: '#app',

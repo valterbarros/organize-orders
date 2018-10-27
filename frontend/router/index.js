@@ -4,6 +4,7 @@ import OrderNew from '../pages/order/new.vue'
 import OrderIndex from '../pages/order/index.vue'
 import SessionNewUser from '../pages/session/new_user.vue'
 import SessionNewBoss from '../pages/session/new_boss.vue'
+import BossIndex from '../pages/boss/index.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/session/boss/new',
       name: 'session_new_boss',
       component: SessionNewBoss
+    },
+    {
+      path: '/boss',
+      name: 'boss',
+      component: BossIndex
     }
   ]
 })
