@@ -4,7 +4,7 @@
       <div slot="left" v-if="show_back_button()">
         <mt-button @click="$router.go(-1)" icon="back">back</mt-button>
       </div>
-      <router-link v-if="show_boss_button()" :to="{name: 'auth_boss'}" slot="right">Sou Patrão</router-link>
+      <router-link v-if="show_boss_button()" :to="{name: 'auth-boss'}" slot="right">Sou Patrão</router-link>
     </mt-header>
     <router-view></router-view>
   </div>
@@ -14,8 +14,8 @@
 export default {
   data () {
     return {
-      show_back_button_paths_name: ['auth_boss'],
-      show_boss_button_paths_name: ['auth_user'],
+      show_back_button_paths_name: ['auth-boss'],
+      show_boss_button_paths_name: ['auth-user'],
       current_router_name: ''
     }
   },

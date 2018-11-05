@@ -39,12 +39,12 @@ export default new Router({
       children: [
         {
           path: 'user',
-          name: 'auth_user',
+          name: 'auth-user',
           component: AuthUser
         },
         {
           path: 'boss',
-          name: 'auth_boss',
+          name: 'auth-boss',
           component: AuthBoss
         }
       ]
