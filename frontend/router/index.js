@@ -48,11 +48,6 @@ export default new Router({
           component: AuthBoss
         }
       ]
-    },
-    {
-      path: '/boss',
-      name: 'boss',
-      component: BossIndex
     }
   ]
 })

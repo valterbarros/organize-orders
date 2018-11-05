@@ -24,6 +24,8 @@
       v-model="value"
       :options="['Feijão Tropeiro', 'Feijão Caseiro']">
     </mt-radio>
+
+    <mt-button class="create" type="primary">Finalizar</mt-button>
   </div>
 </template>
 
