@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <mt-field label="Qual seu nome?" placeholder="Digite seu nome..." v-model="username"></mt-field>
-    <mt-button class="create" type="primary">Entrar</mt-button>
+
+    <router-link :to="{name: 'order-index'}">
+      <mt-button class="create" type="primary">Entrar</mt-button>
+    </router-link>
   </div>
 </template>
 

@@ -5,17 +5,5 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return { 
-      links: [
-        {
-          name: '',
-          link: '',
-          current: false
-        }
-      ]
-    }
-  }
-}
+export default {}
 </script>

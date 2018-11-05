@@ -5,32 +5,46 @@ import OrderIndex from '../pages/order/index.vue'
 import AuthUser from '../pages/auth/user.vue'
 import AuthBoss from '../pages/auth/boss.vue'
 import BossIndex from '../pages/boss/index.vue'
-import Auth from '../pages/layouts/auth.vue'
+import AuthLayout from '../pages/layouts/auth.vue'
+import AppLayout from '../pages/layouts/app.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'order-new',
-      component: OrderNew
-    },
-    {
-      path: '/orders',
-      name: 'order-index',
-      component: OrderIndex
+      path: '/app',
+      component: AppLayout,
+      children: [
+        {
+          path: 'order-new',
+          name: 'order-new',
+          component: OrderNew
+        },
+        {
+          path: 'orders',
+          name: 'order-index',
+          component: OrderIndex,
+        },
+        {
+          path: 'boss',
+          name: 'boss',
+          component: BossIndex
+        }
+      ]
     },
     {
       path: '/auth',
-      component: Auth,
+      component: AuthLayout,
       children: [
         {
-          path: 'user/new',
+          path: 'user',
+          name: 'auth_user',
           component: AuthUser
         },
         {
-          path: 'user/boss',
+          path: 'boss',
+          name: 'auth_boss',
           component: AuthBoss
         }
       ]
