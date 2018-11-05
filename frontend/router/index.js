@@ -2,9 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import OrderNew from '../pages/order/new.vue'
 import OrderIndex from '../pages/order/index.vue'
-import SessionNewUser from '../pages/session/new_user.vue'
-import SessionNewBoss from '../pages/session/new_boss.vue'
+import AuthUser from '../pages/auth/user.vue'
+import AuthBoss from '../pages/auth/boss.vue'
 import BossIndex from '../pages/boss/index.vue'
+import Auth from '../pages/layouts/auth.vue'
 
 Vue.use(Router)
 
@@ -21,14 +22,18 @@ export default new Router({
       component: OrderIndex
     },
     {
-      path: '/session/user/new',
-      name: 'session_new_user',
-      component: SessionNewUser
-    },
-    {
-      path: '/session/boss/new',
-      name: 'session_new_boss',
-      component: SessionNewBoss
+      path: '/auth',
+      component: Auth,
+      children: [
+        {
+          path: 'user/new',
+          component: AuthUser
+        },
+        {
+          path: 'user/boss',
+          component: AuthBoss
+        }
+      ]
     },
     {
       path: '/boss',
